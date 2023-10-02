@@ -1,0 +1,105 @@
+  body{
+    background-color: #000;
+  }
+  .container {
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1a1a1a; /* Dark background color */
+    color: #ffffff; /* Light text color */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #000; /* Darker container background */
+    border-radius: 10px;
+  }
+
+  .title {
+    color: rgb(87, 24, 87);
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  .title span{
+    color: #ffffff;
+  }
+
+  .sub-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .image img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
+  @media screen and (min-width: 600px) {
+    .image img {
+      max-width: 100%;
+      width: 512px;
+      height: 100%;
+    }
+  }
+  .input-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .sub-input-container{
+    width: 100%;
+    margin: 20px 0px 20px 0px;
+  }
+  input {
+    border: none;
+    width: 75%;
+    padding: 5px;
+    background-color: #1a1a1a; /* Dark input background */
+    color: #ffffff; /* Light text color */
+  }
+
+  button {
+    width: 25%;
+    padding: 5px 10px;
+    border: none;
+    background-color: #ffffff; /* Darker purple button color */
+    color: #1a1a1a; /* Light text color */
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  button:hover {
+    background-color: #000; 
+    color: #ffffff;
+    border-left: solid 1px white;
+  }
+  button:focus{
+    border: none;
+  }
+.loading{
+    width: 100%;
+}
+  .loading-bar{
+    width: 0%;
+    height: 8px;
+    background-color: rgb(87, 24, 87);
+  }
+  .loading-text{
+    font-size: 18px;
+  }
+  .loading-bar-full{
+    width: 100%;
+    height: 8px;
+    background-color: rgb(87, 24, 87);
+    transition: 15s;
+  }
+  .display-none{
+    display: none;
+  }
