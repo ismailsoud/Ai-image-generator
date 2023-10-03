@@ -1,10 +1,9 @@
 import './generator.css';
-import def_image from '../../images/default_image.svg'
+import def_image from '../../images/default_image.jpg'
 import { useRef, useState } from 'react';
 
-
 function ImageGenerator() {
-
+    const api_key = process.env.REACT_APP_OPENAI_API_KEY;
     const [image_url, setImageUrl] = useState("/")
     const [loading, setLoading] = useState(false)
 
@@ -23,7 +22,7 @@ function ImageGenerator() {
                     headers:{
                         "Content-Type": "application/json",
                         Authorization:
-                        "Bearer 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",
+                        `Bearer ${api_key}`,
                         "User-Agent":"Chrome",
                     },
                     body:JSON.stringify({
@@ -34,7 +33,6 @@ function ImageGenerator() {
                 }
             )
             let data = await response.json();
-            console.log(data)
             let data_array = data.data;
             setImageUrl(data_array[0].url)
             setLoading(false)
