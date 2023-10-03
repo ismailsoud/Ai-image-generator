@@ -26,9 +26,9 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
+          git config --global user.email "renovate[bot]@users.noreply.github.com"
+          git config --global user.name "renovate[bot]"
           npm install -g gh-pages
-          gh-pages -d build -b gh-pages -u "${{ github.actor }}" --remote "origin"
+          gh-pages -d build -b gh-pages -u "renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>" --remote "origin"
         env:
           REACT_APP_OPENAI_API_KEY: ${{ secrets.REACT_APP_OPENAI_API_KEY }}
