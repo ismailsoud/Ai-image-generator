@@ -53,7 +53,7 @@ function ImageGenerator() {
       <h1 className='title'>Ai image <span>Generator</span></h1>
       <div className='sub-container'> 
         <div className='image'>
-          <img src={image_url==="/"?def_image:image_url} alt='default image'/>
+          <img src={image_url==="/"?def_image:image_url} alt='default'/>
         </div>
         <div className="loading">
             <div className={loading?"loading-bar-full":"loading-bar"}></div>
